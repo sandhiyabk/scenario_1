@@ -6,6 +6,7 @@ import ruleRoutes from './routes/ruleRoutes.js';
 import executionRoutes from './routes/executionRoutes.js';
 import statsRoutes from './routes/statsRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
+import cronRoutes from './routes/cronRoutes.js';
 import { runSeed } from './seed.js';
 import { logger } from './utils/logger.js';
 import { errorHandler } from './middleware/errorHandler.js';
@@ -45,6 +46,7 @@ app.use('/rules', ruleRoutes);
 app.use('/executions', executionRoutes);
 app.use('/stats', statsRoutes);
 app.use('/notifications', notificationRoutes);
+app.use('/cron', cronRoutes);
 
 // Seed endpoint — populates sample workflows for demo
 app.post('/seed', async (req, res) => {
