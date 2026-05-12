@@ -11,7 +11,18 @@
   "crons": [
     {
       "path": "/api/cron/timeout",
-      "schedule": "* * * * *"
+      "schedule": "0 0 * * *"
     }
-  ]
+  ],
+  "experimentalServices": {
+    "frontend": {
+      "entrypoint": "frontend",
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "entrypoint": "backend",
+      "routePrefix": "/_/backend"
+    }
+  }
 }
